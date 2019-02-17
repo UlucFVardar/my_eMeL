@@ -499,7 +499,7 @@ my_eMeL.draw_decisionBoundries (train_data_df, train_label_df, 'Labels', k, dist
 ```
 
 
-![png](output_11_0.png)
+![png](./ss/output_11_0.png)
 
 
 
@@ -510,7 +510,7 @@ my_eMeL.draw_decisionBoundries (train_data_df, train_label_df, 'Labels', k, dist
 ```
 
 
-![png](output_12_0.png)
+![png](./ss/output_12_0.png)
 
 
 
@@ -521,8 +521,16 @@ my_eMeL.draw_decisionBoundries (train_data_df, train_label_df, 'Labels', k, dist
 ```
 
 
+![png](./ss/output_13_0.png)
+
+
+
 ```python
 k = 1
 distance_metric_for_clf = 'Euclidean'
 my_eMeL.draw_decisionBoundries (train_data_df, train_label_df, 'Labels', k, distance_metric_for_clf , h = 0.02)
 ```
+
+
+![png](./ss/output_14_0.png)
+
