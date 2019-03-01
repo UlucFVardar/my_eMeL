@@ -2,7 +2,22 @@ import pandas as pd
 
 
 
-
+def load_known_txt_V2( file_path, delimiter, data_column_asList, label_column = None ):
+    f = open(file_path,'r')
+    data  = []
+    label = []
+    for line in f.readlines():
+        parts = line.replace('\r','').replace('\n','').split(delimiter)
+        
+        data_row = [parts[i] for i in data_column_asList]
+        data.append(data_row)
+        if label_column != None:
+        	label_row = parts[label_column]
+        	label.append(label_row)
+    f.close()
+    if label_column == None:
+   		return data
+    return data,label
 
 def load_known_txt( file_path, delimiter, data_column_asList, label_column ):
 	f = open(file_path,'r')

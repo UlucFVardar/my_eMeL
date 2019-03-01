@@ -31,7 +31,9 @@ def distance_calculate(p1,p2,distance_metric):
 	    cos = float(p1[0]*p2[0] + p1[1]*p2[1])/float(calclualte_len(p1)*calclualte_len(p2))
 	    return my_arccos(cos)*(180/math.pi)
 
-
+	if type(p1) is not type(np.array([0])):
+		p1 = np.array(p1)
+		p2 = np.array(p2)
 	if distance_metric == 'Euclidean':
 		return np.linalg.norm((p1-p2))
 	if distance_metric == 'Manhattan':

@@ -7,7 +7,7 @@ import copy
 
 from KNeighborsClassifier import KNeighborsClassifier as knc
 from AccuracyTable import AccuracyTable
-
+from KmeansClustering import KMeans_Clustring as KMeans_Clustring
 
 import matplotlib.pyplot as plt
 from matplotlib.colors import ListedColormap
@@ -74,3 +74,7 @@ def draw_decisionBoundries (train_data_df, train_label_df, label_col_name, k, di
     plt.xlabel('Iris_Feature_1')
 
     plt.show()    
+
+
+def KMeans( n_clusters ):
+    return KMeans_Clustring(n_clusters)    
